@@ -18,7 +18,7 @@ body {
   transition: 0.2s;
 }
 .contentDiv {
-  font-size: x-large;
+  font-size: 2vh;
   /* text-align: center; */
   width: 50vw;
   z-index: 10;
@@ -46,7 +46,6 @@ body {
   /* -webkit-box-shadow: 0px 10px 14px -1px rgba(143, 202, 100, 1);
   -moz-box-shadow: 0px 10px 14px -1px rgba(143, 202, 100, 1);
   box-shadow: 0px 10px 14px -1px rgba(143, 202, 100, 1); */
-
   /* font-family: "Courier New", Courier, monospace; */
 }
 .none {
@@ -57,6 +56,9 @@ body {
   z-index: 1000;
   height: 10vh;
   background: #fff;
+  border-top: 1px solid rgba(143, 202, 100, 1);
+  display: flex;
+
   /* -webkit-box-shadow: 0px -10px 14px -1px rgba(255, 248, 0, 1);
   -moz-box-shadow: 0px -10px 14px -1px rgba(255, 248, 0, 1);
   box-shadow: 0px -10px 14px -1px rgba(255, 248, 0, 1); */
@@ -70,13 +72,14 @@ body {
 }
 .menuBtns {
   height: 100%;
-  width: 10vw;
+  width: 12vw;
   display: flex;
   align-content: center;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: 0.2s;
+  white-space: nowrap;
 }
 
 .menuBtns:hover {
@@ -114,8 +117,10 @@ hr {
 #homePhoto {
   position: absolute;
   left: 55vw;
-  top: 11vh;
+  top: 10vh;
   width: 50vw;
+  max-height: 80vh;
+  height: 80vh;
   transition: 0.3s;
 }
 #homePhoto:hover {
@@ -141,7 +146,7 @@ hr {
 }
 
 h1 {
-  font-size: 3vw;
+  font-size: 4vh;
 }
 .logo:hover {
   transform: rotate(360deg);
@@ -160,10 +165,30 @@ h1 {
 
 #zoomPhoto {
   width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
+  height: 92vh;
+  margin-top: 8vh;
+  position: absolute;
+  top: 0;
+  display: flex;
+  left: 0;
+  z-index: 1000000;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
-#zoomPhoto > img {
-  width: 80%;
-  height: 80%;
+#zoomPhoto > img:nth-child(2) {
+  width: 70vw;
+  height: 70vh;
+}
+
+#closeCross {
+  position: absolute;
+  width: 4vh;
+  height: 4vh;
+  fill: #fff;
+  top: 5vh;
+  right: 5vw;
+  cursor: pointer;
+  color: #fff;
 }

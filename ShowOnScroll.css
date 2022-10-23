@@ -1,0 +1,13 @@
+@keyframes anim {
+  0% {
+    transform: translateY(10vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.showed {
+  animation: anim 1s forwards;
+}

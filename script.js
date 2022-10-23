@@ -1,3 +1,12 @@
+import Show from "./showOnScroll.js";
+let content = [
+  document.querySelector("#homeDiv"),
+  document.querySelector("#homePhoto"),
+  document.querySelector("#galery"),
+];
+window.scrollTo(0, 0);
+new Show(content, false);
+
 let photoSrcArray = [];
 let galeryContainer = document.querySelector("#galery");
 let homePhoto = document.querySelector("#homePhoto");
@@ -30,7 +39,7 @@ function addToGalery(pictrueNr) {
 
 let menuBtns = document.querySelectorAll(".menuBtns");
 menuBtns = [...menuBtns];
-console.log(menuBtns);
+// console.log(menuBtns);
 menuBtns.forEach((e, i) => {
   e.addEventListener("click", () => {
     console.log(e);
@@ -45,18 +54,42 @@ function contentChange(i) {
     : homePhoto.classList.remove("none");
 }
 
-let allImages = document.querySelectorAll("#galery > img");
-allImages = [...allImages];
-console.log(allImages);
+// console.log(allImages);
 
-//   allImages.forEach((e) => {
-//     e.addEventListener("click", () => {
-//       console.log(e);
-//       changeZoomPhoto(e.src);
-//     });})
+function changeZoomPhoto(src) {
+  // console.log(src);
+  let zoomphoto = document.querySelector("#zoomPhoto > img:nth-child(2)");
+  zoomphoto.src = src;
+  zoomphoto.parentElement.classList.toggle("none");
+}
 
-// function changeZoomPhoto(src) {
-//   console.log(src);
-// }
- 
-  let galeryBtn document.qUER
+let galeryBtn = document.querySelector("#menu > div:nth-child(2)");
+
+galeryBtn.addEventListener("click", (e) => {
+  // console.log(e.target);
+
+  let allImages = document.querySelectorAll("#galery > img");
+  allImages = [...allImages];
+  allImages.forEach((e) => {
+    e.addEventListener("click", () => {
+      // console.log(e);
+      changeZoomPhoto(e.src);
+    });
+  });
+});
+
+let closeCross = document.querySelector("#closeCross");
+closeCross.addEventListener("click", () => {
+  let zoomphoto = document.querySelector("#zoomPhoto > img:nth-child(2)");
+  zoomphoto.parentElement.classList.toggle("none");
+});
+
+document.body.addEventListener("wheel", (e) => {
+  if (e.wheelDelta < 0) {
+    let x = document.querySelector("#fotter");
+    x.classList.remove("none");
+  } else {
+    let x = document.querySelector("#fotter");
+    x.classList.add("none");
+  }
+});
