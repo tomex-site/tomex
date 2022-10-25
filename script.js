@@ -1,8 +1,8 @@
 import Show from "./showOnScroll.js";
 let content = [
   document.querySelector("#homeDiv"),
-  document.querySelector("#homePhoto"),
-  document.querySelector("#galery"),
+  // document.querySelector("#homePhoto"),
+  // document.querySelector("#galery"),
 ];
 window.scrollTo(0, 0);
 new Show(content, false);
@@ -19,7 +19,7 @@ let constentDivs = [
 ];
 
 for (let i = 1; i < 50; i++) {
-  fetch(`https://thelolos.github.io/strona-budownictwo/photos/${i}.png`)
+  fetch(`https://thelolos.github.io/strona-budownictwo/photos/${i}.jpeg`)
     .then((res) => {
       res.status == 200 ? addToGalery(i) : null;
     })

@@ -5,7 +5,7 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 #galery > img {
   width: 90%;
@@ -39,7 +39,7 @@ body {
   font-size: x-large;
   padding: 0 30vw 0 30vw;
   position: fixed;
-  background-color: #fff;
+  background-color: yellow;
   -webkit-box-shadow: 0px 10px 14px -1px rgba(143, 202, 100, 1);
   -moz-box-shadow: 0px 10px 14px -1px rgba(143, 202, 100, 1);
   box-shadow: 0px 10px 14px -1px rgba(143, 202, 100, 1);
@@ -64,7 +64,7 @@ body {
   box-shadow: 0px -10px 14px -1px rgba(255, 248, 0, 1); */
 }
 #homeDiv {
-  height: 70vh;
+  height: 90vh;
   width: 50vw;
   margin-left: -40vw;
   padding: 3vh;
@@ -191,4 +191,11 @@ h1 {
   right: 5vw;
   cursor: pointer;
   color: #fff;
+}
+.homeText {
+  font-size: 1.1rem;
+}
+
+.lista {
+  font-size: 1rem;
 }
