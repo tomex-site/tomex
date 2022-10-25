@@ -31,7 +31,7 @@ for (let i = 1; i < 50; i++) {
 }
 
 function addToGalery(pictrueNr) {
-  const photoSrc = `https://thelolos.github.io/strona-budownictwo/photos/${pictrueNr}.png`;
+  const photoSrc = `https://thelolos.github.io/strona-budownictwo/photos/${pictrueNr}.jpeg`;
   let photoElem = document.createElement("img");
   photoElem.src = photoSrc;
   galeryContainer.appendChild(photoElem);
