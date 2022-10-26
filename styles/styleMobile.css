@@ -222,11 +222,14 @@ h1 {
 }
 
 .homeText {
-  font-size: 1.6vh;
+  font-size: 0.8rem;
 }
 
 .lista {
-  font-size: 1.4vh;
+  font-size: 0.6rem;
+}
+#homeDiv > p:nth-child(6) {
+  font-size: 0.8rem;
 }
 /* .zoomPhoto {
     transform: scale(1) !important;
@@ -379,4 +382,13 @@ form {
   justify-content: center;
   align-content: center;
   flex-wrap: nowrap;
+}
+
+#contactMainDiv > p {
+  font-size: 1rem;
+  padding: 0 2rem 0 2rem;
+}
+
+#galeryText > p {
+  font-size: 1rem;
 }
