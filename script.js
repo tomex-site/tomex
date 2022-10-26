@@ -1,10 +1,13 @@
 import Show from "./showOnScroll.js";
 let content = [
+  // document.querySelector("#zoomPhoto > img:nth-child(2)"),
+  // document.querySelector("body > div.footer-basic"),
   document.querySelector("#homeDiv"),
+  // document.querySelector(".footer"),
   // document.querySelector("#homePhoto"),
   // document.querySelector("#galery"),
 ];
-window.scrollTo(0, 0);
+
 new Show(content, false);
 
 let photoSrcArray = [];
@@ -42,11 +45,17 @@ menuBtns = [...menuBtns];
 // console.log(menuBtns);
 menuBtns.forEach((e, i) => {
   e.addEventListener("click", () => {
-    console.log(e);
+    window.scrollTo(0, 0);
+    closeZoomPhoto();
+    // console.log(e);
     contentChange(i);
   });
 });
 function contentChange(i) {
+  menuBtns.forEach((e) => {
+    e.classList.remove("choosen");
+  });
+  menuBtns[i].classList.add("choosen");
   constentDivs.forEach((e) => e.classList.add("none"));
   constentDivs[i].classList.toggle("none");
   i !== 0
@@ -60,7 +69,8 @@ function changeZoomPhoto(src) {
   // console.log(src);
   let zoomphoto = document.querySelector("#zoomPhoto > img:nth-child(2)");
   zoomphoto.src = src;
-  zoomphoto.parentElement.classList.toggle("none");
+  zoomphoto.parentElement.classList.remove("none");
+  // zoomphoto.parentElement.classList.toggle("zoomPhoto");
 }
 
 let galeryBtn = document.querySelector("#menu > div:nth-child(2)");
@@ -79,17 +89,34 @@ galeryBtn.addEventListener("click", (e) => {
 });
 
 let closeCross = document.querySelector("#closeCross");
-closeCross.addEventListener("click", () => {
-  let zoomphoto = document.querySelector("#zoomPhoto > img:nth-child(2)");
-  zoomphoto.parentElement.classList.toggle("none");
-});
+// closeCross.addEventListener("click", () => {});
 
-document.body.addEventListener("wheel", (e) => {
-  if (e.wheelDelta < 0) {
-    let x = document.querySelector("#fotter");
-    x.classList.remove("none");
-  } else {
-    let x = document.querySelector("#fotter");
-    x.classList.add("none");
-  }
-});
+closeCross.onclick = () => {
+  closeZoomPhoto();
+};
+
+function closeZoomPhoto() {
+  let zoomphoto = document.querySelector("#zoomPhoto > img:nth-child(2)");
+  zoomphoto.parentElement.classList.add("none");
+}
+
+// document.body.addEventListener("wheel", (e) => {
+//   if (e.wheelDelta < 0) {
+//     let x = document.querySelector("#fotter");
+//     x.classList.remove("none");
+//   } else {
+//     let x = document.querySelector("#fotter");
+//     x.classList.add("none");
+//   }
+// });
+
+let sendBtn = document.querySelector("#sendBtn");
+sendBtn.onclick = (event) => {
+  event.preventDefault();
+  console.log(document.getElementById("message").value);
+
+  window.location.href = `mailto:name1@rapidtables.com?subject=${
+    document.getElementById("name").value
+  } - ${document.getElementById("subject").value}
+  &body=${document.getElementById("message").value}`;
+};
