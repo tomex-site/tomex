@@ -118,7 +118,7 @@ hr {
 #homePhoto {
   position: absolute;
   left: 38vw;
-  top: 23vh;
+  top: 20vh;
   max-height: 80vh;
   height: 80vh;
   transition: 0.3s;
