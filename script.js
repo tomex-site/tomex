@@ -120,3 +120,12 @@ sendBtn.onclick = (event) => {
   } - ${document.getElementById("subject").value}
   &body=${document.getElementById("message").value}`;
 };
+
+let callBtn = document.querySelector("#callBtn");
+callBtn.onclick = () => {
+  window.open("tel:+48 728 208 628", "_self");
+};
+let messageBtn = document.querySelector("#callBtn");
+messageBtn.onclick = () => {
+  window.open("sms:+48 728 208 628", "_self");
+};

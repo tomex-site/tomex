@@ -5,22 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TOMEX</title>
-    <script src="./scripts/mobileCheck.js"></script> 
+    <script src="./scripts/mobileCheck.js"></script>
     <meta
       name="description"
       content="Potrzebujesz wykonczenia wnetrz czy też remontu? 
         Firma TOMEX Pomoże ci odnaleść to czego szukasz."
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
-    /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link
       rel="icon"
       href="./photos/TOMEX.LOGO.svg"
@@ -32,9 +31,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
     />
-    <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
-<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
     <meta name="author" content="Piotr TheLoloS Sałaga" />
     <link rel="stylesheet" href="ShowOnScroll.css" />
   </head>
@@ -49,9 +45,18 @@
       onclick="location.href='index.html';"
     />
     <div id="menu">
-      <div class="menuBtns choosen">Strona główna</div>
-      <div class="menuBtns">Galeria</div>
-      <div class="menuBtns">Kontakt</div>
+      <div class="menuBtns choosen">
+        <!-- Strona główna -->
+        <i class="fa fa-home"></i>
+      </div>
+      <div class="menuBtns">
+        <!-- Galeria -->
+        <i class="fa fa-image"></i>
+      </div>
+      <div class="menuBtns">
+        <!-- kontakt -->
+        <i class="fa fa-address-card"></i>
+      </div>
     </div>
     <img src="./photos/1.png" alt="homePhoto" id="homePhoto" />
 
@@ -95,105 +100,90 @@
         <!-- <div id="homeBtn">Sprawdz!</div> -->
       </div>
       <div id="galery" class="contentDiv none">
+        <div id="galeryText">
+          <h1>Galeria</h1>
+          <br />
+          <hr />
+          <p>Zobacz nasze wcześniejsze dokonania!</p>
+          <hr />
+          <br />
+        </div>
         <div id="zoomPhoto" class="none">
           <img src="./photos/cross-23.svg" alt="close" id="closeCross" />
           <img src="" alt="zoomPhoto" srcset="" />
         </div>
       </div>
       <div id="contact" class="contentDiv none">
-        <!-- <div id="contactMainDiv">
+        <div id="contactMainDiv">
           <h1>Kontakt</h1>
-          <hr>
-          <p>Czy masz jakieś pytania? Zapraszamy do bezpośredniego kontaktu. Nasz zespół postara odpowiedzieć na wszelkie pytania! </p>
-          <div class="contactDivs"></div>
-          <div class="contactDivs"></div>
+          <br />
+
+          <p>
+            Czy masz jakieś pytania? Zapraszamy do bezpośredniego kontaktu. Nasz
+            zespół postara odpowiedzieć na wszelkie pytania!
+          </p>
+          <hr />
+          <br />
+          <form id="contact-form">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control"
+              placeholder="Imie o Nazwisko"
+            />
+            <input
+              type="text"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="E-mail"
+            />
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              class="form-control"
+              placeholder="Temat"
+            />
+            <textarea
+              type="text"
+              id="message"
+              name="message"
+              rows="2"
+              class="form-control md-textarea"
+              placeholder="Treść wiadomości"
+            ></textarea>
+          </form>
+          <br />
+          <div class="text-center">
+            <a class="btn" id="sendBtn">Wyślij</a>
+          </div>
+          <div class="status"></div>
+        </div>
+        <div class="list-unstyled">
+          <div>
+            <i class="fas fa-map-marker-alt"></i><br />
+            <p>
+              Gaszowice 44-293 <br />
+              ul. Rydułtowska 64 <br />
+              NIP: 6422606171
+            </p>
+          </div>
+          <div>
+            <i class="fa fa-phone"></i><br />
+            <p>+48 728 208 628</p>
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i><br />
+            <p>infojakubczyk@gmail.com</p>
+          </div>
         </div>
       </div>
-      </div> -->
-       
-<!--Section: Contact v.2-->
-<div id="contactMainDiv">
-  <h1>Kontakt</h1>
-  <br>
-  <hr>
-  <p>Czy masz jakieś pytania? Zapraszamy do bezpośredniego kontaktu. Nasz zespół postara odpowiedzieć na wszelkie pytania! </p>
-  <hr>
-  <br>
-  <br>
-  <section class="mb-4">
-
-
-    <div class="row">
-
-        <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Imie o Nazwisko">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control" placeholder="E-mail">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Temat">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Treść wiadomości"></textarea>
-                        </div>
-
-                    </div>
-                </div>
-            </form>
-            <br>
-            <div class="text-center">
-
-                <a class="btn" id="sendBtn">Wyślij</a>
-            </div>
-            <div class="status"></div>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-md-3 text-center" id="contactFormIcons">
-            <ul class="list-unstyled mb-0">
-                <li><i class="fas fa-map-marker-alt"></i><br>
-                    <p>Gaszowice 44-293
-                     <br> ul. Rydułtowska 64
-                      <br> NIP: 6422606171
-                    </p>
-                </li>
-
-                <li><i class="fa fa-phone"></i><br>
-                    <p>+48 728 208 628</p>
-                </li>
-
-                <li><i class="fa fa-envelope"></i><br>
-                    <p>infojakubczyk@gmail.com</p>
-                </li>
-            </ul>
-        </div>
-        <!--Grid column-->
-
     </div>
 
-</section>
-</div>
-</div>
-</div>
-
-<!--Section: Contact v.2-->
-    </div>
+    <div id="callIcon" class="callBtn"><i class="fa fa-phone"></i></div>
+    <div id="messageIcon" class="callBtn"><i class="fa fa-envelope"></i></div>
 
     <div class="footer-basic">
       <footer>
@@ -208,7 +198,7 @@
             <a href="mailto:thelolos3031@gmail.com">Kontakt do Mnie</a>
           </li>
         </ul>
-        
+
         <p class="copyright">
           <a href="http://thsx.pl/" target="_blank" rel="noopener noreferrer">
             Thsx.pl</a
@@ -217,10 +207,6 @@
         </p>
       </footer>
     </div>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script> -->
     <script type="module" src="./script.js"></script>
     <script
       type="text/javascript"

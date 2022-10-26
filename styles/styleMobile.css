@@ -43,12 +43,12 @@ body {
   z-index: 10001;
   /* border-bottom: 1px solid black; */
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-wrap: nowrap;
   align-content: center;
   font-size: x-large;
-  padding: 0 30vw 0 30vw;
+  padding: 0 5vw 0 30vw;
   position: fixed;
   background: rgb(255, 203, 4);
   /* background: linear-gradient(
@@ -87,7 +87,7 @@ body {
 }
 .menuBtns {
   height: 100%;
-  width: 12vw;
+  width: 15vw;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -173,11 +173,12 @@ h1 {
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  margin-top: 5vh;
+  margin-top: 20vh;
   width: 90vw;
   grid-auto-rows: minmax(min-content, max-content);
   justify-items: center;
   gap: 2vh;
+  padding-bottom: 10vh;
 }
 
 #zoomPhoto {
@@ -221,11 +222,11 @@ h1 {
 }
 
 .homeText {
-  font-size: 1.5vh;
+  font-size: 1.6vh;
 }
 
 .lista {
-  font-size: 1.3vh;
+  font-size: 1.4vh;
 }
 /* .zoomPhoto {
     transform: scale(1) !important;
@@ -286,25 +287,20 @@ h1 {
 
 #contactMainDiv {
   text-align: center;
+  margin-top: 5vh;
 }
 
 /* form margin */
-.row {
+/* .row {
   margin-bottom: 4vh;
-}
+} */
 
 .list-unstyled {
 }
 i {
   font-size: 4vh !important;
 }
-#contactMainDiv
-  > section
-  > div
-  > div.col-md-3.text-center
-  > ul
-  > li:nth-child(3)
-  > p {
+#contact > div.list-unstyled > div:nth-child(3) > p {
   overflow-wrap: anywhere;
 }
 
@@ -316,7 +312,72 @@ i {
   align-items: center;
 }
 #sendBtn {
-  width: 10vw;
+  width: 25vw;
   background: #ffcb04;
   color: white;
+  height: 5vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  height: 25vh;
+}
+.list-unstyled {
+  padding-left: 0;
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 0;
+  margin-top: 4vh;
+  font-size: 1.6vh;
+}
+
+.list-unstyled > div {
+  width: 33vw;
+  text-align: center;
+  padding: 2vh 2vw 0 2vw;
+}
+.form-control {
+  width: 90% !important;
+}
+#galeryText {
+  width: 100vw;
+  padding: 5vh;
+  height: 20vh;
+  position: absolute;
+  top: 8vh;
+  /* display: revert; */
+  text-align: center;
+}
+
+#callIcon {
+  right: 9vh;
+}
+#messageIcon {
+  right: 1vh;
+}
+.callBtn {
+  position: absolute;
+  z-index: 100000;
+  background-color: #ffcb04;
+  color: white;
+  display: flex;
+  width: 7vh;
+  height: 7vh;
+  border-radius: 100%;
+  bottom: 1vh;
+  right: 9vh;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
 }
