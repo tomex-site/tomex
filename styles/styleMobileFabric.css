@@ -297,6 +297,8 @@ h1 {
   } */
 
 .list-unstyled {
+  font-size: 2.2vh;
+  font-weight: 500;
 }
 i {
   font-size: 4vh !important;
@@ -340,6 +342,8 @@ form {
   padding-left: 0;
   margin-top: 4vh;
   font-size: 1.6vh;
+  font-size: 2.2vh;
+  font-weight: 500;
 }
 
 .list-unstyled > div {
