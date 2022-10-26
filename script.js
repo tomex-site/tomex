@@ -27,7 +27,7 @@ for (let i = 1; i < 50; i++) {
       res.status == 200 ? addToGalery(i) : null;
     })
     .then((res) => {
-      // console.clear();
+      console.clear();
     })
 
     .catch((err) => console.log(err));
