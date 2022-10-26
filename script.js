@@ -122,10 +122,10 @@ sendBtn.onclick = (event) => {
 };
 
 let callBtn = document.querySelector("#callBtn");
-callBtn.onclick = () => {
-  window.open("tel:+48 728 208 628", "_self");
-};
+callBtn.addEventListener("click", () => {
+  window.open("tel:+48728208628", "_self");
+});
 let messageBtn = document.querySelector("#callBtn");
-messageBtn.onclick = () => {
-  window.open("sms:+48 728 208 628", "_self");
-};
+messageBtn.addEventListener("click", () => {
+  window.open("sms:+48728208628", "_self");
+});

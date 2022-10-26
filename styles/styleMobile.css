@@ -189,8 +189,8 @@ h1 {
   top: 0;
   display: flex;
   left: 0;
-  z-index: 1000000;
-  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000007;
+  background-color: rgba(0, 0, 0, 0.8);
   align-content: center;
   justify-content: center;
   align-items: center;
@@ -200,8 +200,7 @@ h1 {
     transform: scale(0.1); */
 }
 #zoomPhoto > img:nth-child(2) {
-  width: 70vw;
-  height: 70vh;
+  width: 80vw;
 }
 
 #closeCross {
@@ -246,10 +245,9 @@ h1 {
   padding: 20px 0;
   background-color: #ffffff;
   color: #4b4c4d;
-  z-index: 1000;
+  z-index: 1;
   bottom: 0;
   position: relative;
-  /* height: 8vh; */
 }
 
 .footer-basic ul {
@@ -366,7 +364,7 @@ form {
   right: 1vh;
 }
 .callBtn {
-  position: absolute;
+  position: fixed;
   z-index: 100000;
   background-color: #ffcb04;
   color: white;
