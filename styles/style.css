@@ -8,7 +8,7 @@ body {
   overflow-x: hidden;
 }
 #bg {
-  width: 100vw;
+  width: 150vw;
   height: 100vh;
   position: fixed;
   z-index: 1;
