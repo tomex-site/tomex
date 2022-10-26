@@ -129,3 +129,14 @@ let messageBtn = document.querySelector("#messageIcon");
 messageBtn.addEventListener("click", () => {
   window.open("sms:+48728208628", "_self");
 });
+
+if (!mobileStatus) {
+  document.querySelector("#callIcon").classList.add("none");
+  document.querySelector("#messageIcon").classList.add("none");
+  document.querySelector("#menu > div:nth-child(1)").innerHTML =
+    "Strona Główna";
+  document.querySelector("#menu > div:nth-child(2)").innerHTML = "Galeria";
+  document.querySelector("#menu > div:nth-child(3)").innerHTML = "Kontakt";
+} else {
+  document.querySelector("#maps").classList.add("none");
+}
