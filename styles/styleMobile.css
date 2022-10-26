@@ -108,7 +108,7 @@ body {
   width: 7vh;
   height: 7vh;
   top: 0.5vh;
-  left: 1vw;
+  left: 3vh;
   cursor: pointer;
   transition: 0.3s;
   z-index: 100000;
@@ -222,14 +222,14 @@ h1 {
 }
 
 .homeText {
-  font-size: 0.9rem;
+  font-size: 1.6vh;
 }
 
 .lista {
-  font-size: 0.8rem;
+  font-size: 1.4vh;
 }
 #homeDiv > p:nth-child(5) {
-  font-size: 0.9rem;
+  font-size: 1.6vh;
 }
 /* .zoomPhoto {
     transform: scale(1) !important;
