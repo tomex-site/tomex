@@ -22,19 +22,19 @@ let constentDivs = [
 ];
 
 for (let i = 1; i < 50; i++) {
-  fetch(`https://thelolos.github.io/strona-budownictwo/photos/${i}.jpeg`)
+  fetch(`https://tomex-site.github.io/tomex/photos/${i}.jpeg`)
     .then((res) => {
       res.status == 200 ? addToGalery(i) : null;
     })
     .then((res) => {
-      console.clear();
+      // console.clear();
     })
 
     .catch((err) => console.log(err));
 }
 
 function addToGalery(pictrueNr) {
-  const photoSrc = `https://thelolos.github.io/strona-budownictwo/photos/${pictrueNr}.jpeg`;
+  const photoSrc = `https://tomex-site.github.io/tomex/photos/${pictrueNr}.jpeg`;
   let photoElem = document.createElement("img");
   photoElem.src = photoSrc;
   galeryContainer.appendChild(photoElem);

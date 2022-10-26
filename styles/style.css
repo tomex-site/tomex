@@ -222,6 +222,7 @@ h1 {
   z-index: 1000;
   bottom: 0;
   position: relative;
+  z-index: 2;
 }
 
 .footer-basic ul {
