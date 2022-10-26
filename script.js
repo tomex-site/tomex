@@ -121,11 +121,11 @@ sendBtn.onclick = (event) => {
   &body=${document.getElementById("message").value}`;
 };
 
-let callBtn = document.querySelector("#callBtn");
+let callBtn = document.querySelector("#callIcon");
 callBtn.addEventListener("click", () => {
   window.open("tel:+48728208628", "_self");
 });
-let messageBtn = document.querySelector("#callBtn");
+let messageBtn = document.querySelector("#messageIcon");
 messageBtn.addEventListener("click", () => {
   window.open("sms:+48728208628", "_self");
 });
