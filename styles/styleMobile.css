@@ -34,7 +34,7 @@ body {
   width: 100vw;
   z-index: 10;
   height: 100vh;
-  /* background-color: #202023; */
+  /* backgroun-color: #202023; */
   /* background-color: #dccd2971; */
 }
 #menu {
@@ -117,6 +117,7 @@ body {
   width: 100vw;
   padding-top: 10vh;
   display: flex;
+
   align-content: center;
   justify-content: center;
   align-items: center;
@@ -313,13 +314,13 @@ i {
   width: 25vw;
   background: #ffcb04;
   color: white;
-  height: 5vh;
+  height: 2.75rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-content: center;
   justify-content: space-around;
   align-items: center;
