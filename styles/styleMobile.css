@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 #bg {
-  width: 150vw;
+  width: 200vw;
   height: 100vh;
   position: fixed;
   z-index: 1;
@@ -130,11 +130,15 @@ body {
   color: white;
   text-align: center;
   font-weight: 500;
+  border-right: 1px solid white;
 }
 
 .menuBtns:hover {
   background-color: #f1f3f7;
   color: #000;
+}
+#menu > div:nth-child(1) {
+  border-left: 1px solid white;
 }
 
 .logo {
@@ -305,11 +309,13 @@ h1 {
 }
 
 .homeText {
-  font-size: 1.6vh;
+  font-size: 1.5vh;
 }
 
 .lista {
   font-size: 1.4vh;
+  /* font-size: 1.4vh; */
+  font-weight: 500;
 }
 #homeDiv > p:nth-child(5) {
   font-size: 1.6vh;
