@@ -22,7 +22,7 @@ let constentDivs = [
 ];
 
 for (let i = 1; i < 50; i++) {
-  fetch(`https://tomex-site.github.io/tomex/photos/${i}.jpeg`)
+  fetch(`https://tomex.rybnik.pl//photos/${i}.jpeg`)
     .then((res) => {
       res.status == 200 ? addToGalery(i) : null;
     })
@@ -34,7 +34,7 @@ for (let i = 1; i < 50; i++) {
 }
 
 function addToGalery(pictrueNr) {
-  const photoSrc = `https://tomex-site.github.io/tomex/photos/${pictrueNr}.jpeg`;
+  const photoSrc = `https://tomex.rybnik.pl/photos/${pictrueNr}.jpeg`;
   let photoElem = document.createElement("img");
   photoElem.src = photoSrc;
   galeryContainer.appendChild(photoElem);
